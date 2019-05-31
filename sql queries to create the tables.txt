@@ -1,0 +1,27 @@
+To create the userinfo table:
+
+create table "userinfo" 
+(
+id int NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+username varchar(32) NOT NULL,
+email varchar(32) primary key NOT NULL,
+helpdomain varchar(32) NOT NULL,
+city varchar(32) NOT NULL,
+password varchar(32) NOT NULL,
+mobile BIGINT NOT NULL UNIQUE,
+age INT NOT NULL
+);
+
+To create the postinfo table:
+
+create table "postinfo" 
+(
+id int PRIMARY KEY NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+username varchar(32) NOT NULL,
+email varchar(32) NOT NULL,
+helpdomain varchar(32) NOT NULL,
+location varchar(32) NOT NULL,
+subject varchar(300) NOT NULL,
+mobile BIGINT NOT NULL,
+pdate date NOT NULL
+);

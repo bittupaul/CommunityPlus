@@ -1,0 +1,28 @@
+
+<html>
+    <head>
+        <title>Publish</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="postit" method="post">
+            <div align ="center">
+                <h4>Need Help? We are here. Don't Worry and publish your problem on Community+</h4>
+                <br/><br>
+                Domain Preference:
+                <select required name="domain_preference">
+                <option value="" disabled selected>Select</option>
+                <option value="medical">Medical Help</option>
+                <option value="household">Household Help</option>
+                <option value="automobile">Automobile Services</option>
+                </select>
+                <br/><br/>               
+                Subject:<br/><textarea rows="5" cols="60" placeholder="Elaborate your problem here" name="subject" required></textarea>
+                <br/><br/>
+                Location: <input type="text" name="location" placeholder="Enter the location where you need the help." required size="45"/><br/><br/>
+                <input type="submit" value="Get me help." >
+            </div>
+        </form>
+    </body>
+</html>

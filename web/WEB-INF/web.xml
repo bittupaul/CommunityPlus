@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+        
+    <context-param>
+        <param-name>from</param-name>
+        <param-value>enter a throw away email id here. Give access to less secured apps to this account.</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>enter the password of the above throw away email account here</param-value>
+    </context-param>
+    <context-param>
+        <param-name>driverClass</param-name>
+        <param-value>org.apache.derby.jdbc.ClientDriver (update this as per your jdbc driver configuration)</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbuserName</param-name>
+        <param-value>users(update this as per your database configuration)</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbPassword</param-name>
+        <param-value>users(update this as per your database configuration)</param-value>
+    </context-param>
+    <context-param>
+        <param-name>databaseUrl</param-name>
+        <param-value>jdbc:derby://localhost:1527/ (update this as per your database configuration)</param-value>
+    </context-param>
+    <context-param>
+        <param-name>databaseName</param-name>
+        <param-value>userdetails (update this as per your database configuration)</param-value>
+    </context-param>
+    
+ 
+    <servlet>
+        <servlet-name>postit</servlet-name>
+        <servlet-class>postit</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>myposts</servlet-name>
+        <servlet-class>myposts</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>logout</servlet-name>
+        <servlet-class>logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>userposts</servlet-name>
+        <servlet-class>userposts</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>postit</servlet-name>
+        <url-pattern>/postit</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginUser</servlet-name>
+        <servlet-class>LoginUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginUser</servlet-name>
+        <url-pattern>/LoginUser</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RegisterUser</servlet-name>
+        <servlet-class>RegisterUser</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterUser</servlet-name>
+        <url-pattern>/RegisterUser</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RetrievePassword</servlet-name>
+        <servlet-class>RetrievePassword</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RetrievePassword</servlet-name>
+        <url-pattern>/RetrievePassword</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>homepage</servlet-name>
+        <servlet-class>homepage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>homepage</servlet-name>
+        <url-pattern>/homepage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>myposts</servlet-name>
+        <url-pattern>/CommunityPlus/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logout</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userposts</servlet-name>
+        <url-pattern>/userposts</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+</web-app>

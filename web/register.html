@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Register to Community+</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    
+    </head>
+    <body>
+        <form  method="POST" action="RegisterUser">
+        <div align="center">
+            <br/><br/><br/><br/><br/><br/>
+            <h1>Welcome to Community+</h1>
+            <h3>Register yourself and join the goodness here.</h3>
+            Name: <input type="text" name="name" id="name" placeholder="Enter your name" size="16" oninvalid="Name must be filled in." required/><br/><br/>
+            Mobile:<input type="number" id="mobile" name="mobile" placeholder="Enter Your Mobile No." size="10"  oninvalid="Mobile must be filled in." required/><br/><br/>
+            email:<input type="email" id="email" name="email" placeholder="Enter your email id"  oninvalid="email must be filled in." size="19" required/><br/><br/>
+            City:<input type="text" name="city" placeholder="Enter your city" size="16" required/><br/><br/>
+            Age:<input type="number" name="age" placeholder="Enter your age" size="2" required/><br/><br/>
+            Domain Preference:
+            <select required name="domain_preference">
+                <option value="" disabled selected>Select</option>
+                <option value="medical">Medical Help</option>
+                <option value="household">Household Help</option>
+                <option value="automobile">Automobile Services</option>
+                <option value="all">All of the above</option>
+            </select>
+            <br/><br/>
+            Password: <input type="password" name="password" placeholder="Enter your password" size="16" required/><br/><br/>
+            <input type="submit" value="Proceed" >
+        </div>
+    </form>      
+    </body>
+</html>
+ 
